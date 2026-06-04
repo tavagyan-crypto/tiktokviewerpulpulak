@@ -104,7 +104,7 @@ export const TrendingFeed: React.FC = () => {
     return (
       <div className="w-full h-screen bg-black flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
-          <FiLoader className="animate-spin text-4xl text-tiktok-accent" />
+          <FiLoader className="animate-spin text-4xl text-cyan-400" />
           <p className="text-white">Loading trending videos...</p>
         </div>
       </div>
@@ -118,7 +118,7 @@ export const TrendingFeed: React.FC = () => {
           <p className="text-red-500 text-lg mb-4">{error}</p>
           <button
             onClick={() => window.location.reload()}
-            className="px-6 py-2 bg-tiktok-pink text-white rounded-full font-semibold hover:bg-red-600"
+            className="px-6 py-2 bg-red-500 text-white rounded-full font-semibold hover:bg-red-600"
           >
             Retry
           </button>

@@ -69,7 +69,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, isActive }) => {
             <p className="font-semibold text-white">{video.authorName}</p>
             <p className="text-xs text-gray-300">{video.authorHandle}</p>
           </div>
-          <button className="px-4 py-1 bg-tiktok-pink rounded-full text-white font-semibold text-sm hover:bg-red-600 transition">
+          <button className="px-4 py-1 bg-red-500 rounded-full text-white font-semibold text-sm hover:bg-red-600 transition">
             Follow
           </button>
         </div>
@@ -87,7 +87,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, isActive }) => {
           {video.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-2">
               {video.tags.map((tag) => (
-                <span key={tag} className="text-xs text-tiktok-accent">
+                <span key={tag} className="text-xs text-cyan-400">
                   #{tag}
                 </span>
               ))}
@@ -106,7 +106,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, isActive }) => {
           <div className="bg-gray-800 bg-opacity-70 rounded-full p-3 hover:bg-opacity-100">
             <FiHeart
               size={24}
-              className={isLiked ? 'text-tiktok-pink fill-tiktok-pink' : 'text-white'}
+              className={isLiked ? 'text-red-500 fill-red-500' : 'text-white'}
             />
           </div>
           <span className="text-xs text-white font-semibold">
@@ -142,7 +142,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, isActive }) => {
           <div className="bg-gray-800 bg-opacity-70 rounded-full p-3 hover:bg-opacity-100">
             <FiBookmark
               size={24}
-              className={isSaved ? 'text-tiktok-accent fill-tiktok-accent' : 'text-white'}
+              className={isSaved ? 'text-cyan-400 fill-cyan-400' : 'text-white'}
             />
           </div>
           <span className="text-xs text-white font-semibold">

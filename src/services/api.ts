@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { Video, TrendingResponse } from '../types';
 
-// Mock API service - Replace with real TikTok API integration
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.tiktok.com/v1';
 
 const apiClient = axios.create({
@@ -107,7 +106,6 @@ const mockVideos: Video[] = [
 
 export const fetchTrendingVideos = async (cursor?: string): Promise<TrendingResponse> => {
   try {
-    // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 500));
     
     return {
@@ -123,7 +121,6 @@ export const fetchTrendingVideos = async (cursor?: string): Promise<TrendingResp
 
 export const searchVideos = async (query: string): Promise<Video[]> => {
   try {
-    // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 500));
     
     const lowerQuery = query.toLowerCase();
