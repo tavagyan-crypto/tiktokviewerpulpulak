@@ -104,7 +104,7 @@ const mockVideos: Video[] = [
   },
 ];
 
-export const fetchTrendingVideos = async (cursor?: string): Promise<TrendingResponse> => {
+export const fetchTrendingVideos = async (_cursor?: string): Promise<TrendingResponse> => {
   try {
     await new Promise(resolve => setTimeout(resolve, 500));
     

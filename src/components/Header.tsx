@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FiSearch, FiMenu, FiX } from 'react-icons/fi';
-import { useVideoStore } from '../store/videoStore';
 import { searchVideos } from '../services/api';
 
 interface HeaderProps {
@@ -10,7 +9,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searching, setSearching] = useState(false);
+  const [, setSearching] = useState(false);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
