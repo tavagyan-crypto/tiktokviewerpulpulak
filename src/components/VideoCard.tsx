@@ -10,7 +10,7 @@ interface VideoCardProps {
 }
 
 export const VideoCard: React.FC<VideoCardProps> = ({ video, isActive }) => {
-  const [showDescription, setShowDescription] = useState(false);
+  const [showDescription, _setShowDescription] = useState(false);
   const { likedVideos, savedVideos, toggleLike, toggleSave } = useVideoStore();
 
   const isLiked = likedVideos.has(video.id);
